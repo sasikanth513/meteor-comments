@@ -1,0 +1,26 @@
+<template name="commentForm">
+    {{#autoForm collection="Comments" id="insertComment" type="insert"}}
+    <fieldset>
+      <legend>Comment</legend>
+      {{> afQuickField name='content' rows=6}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>
+
+<template name="comments">
+    {{#if hasComments _id}}
+        {{> commentsTemplate}}
+    {{else}}
+        {{> noCommentsTemplate}}
+    {{/if}}
+</template>
+
+<template name="hasComments">
+    {{#each comments}}
+            {{content}}
+    {{/each}}
+</template>
+<template name="noCommentsTemplate">
+    <h3>There are no Comments</h3>
+</template>
