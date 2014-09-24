@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.2.2');
   api.use(['templating','aldeed:collection2@1.0.0','aldeed:autoform@1.0.0'],both);
   api.addFiles(['lib/both/collections.js'],	both);
-  api.addFiles(['lib/client/templates.html','lib/client/templates.js'],	'client');
+  api.addFiles(['lib/client/templates.html','lib/client/templates.js','lib/client/register.js'],'client');
   api.addFiles(['lib/server/allow.js','lib/server/publish.js'],	'server');
 });
 
