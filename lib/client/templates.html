@@ -18,7 +18,11 @@
 
 <template name="hasComments">
     {{#each comments}}
-            {{content}}
+        <div style="padding:20px">
+	        <div class="tip left">
+                {{content}}
+            </div>
+        </div>
     {{/each}}
 </template>
 <template name="noCommentsTemplate">
