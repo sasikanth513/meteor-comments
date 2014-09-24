@@ -2,9 +2,9 @@
     {{#autoForm collection="Comments" id="insertComment" type="insert"}}
     <fieldset>
       <legend>Comment</legend>
-      {{> afQuickField name='content' rows=6}}
+      {{> afQuickField name='content' id='content' rows=6}}
     </fieldset>
-    <button type="submit" class="btn btn-primary">Insert</button>
+    <button type="submit" doc="{{_id}}" class="btn btn-primary">Insert</button>
   {{/autoForm}}
 </template>
 
